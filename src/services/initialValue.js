@@ -7,8 +7,5 @@ const initialValue = [
 
 export function getInitialValue() {
   const saved = JSON.parse(localStorage.getItem('contacts'));
-  if (saved && saved.length === 0) {
-    window.localStorage.clear();
-  }
   return saved ?? initialValue;
 };
